@@ -19,7 +19,7 @@ export const store = new Vuex.Store({
   },
   actions: {
     fetchMexicanData: ({commit}, data) => {
-      Vue.http.get('https://newsapi.org/v1/articles?source=espn&apiKey=3724d4ada74a457692929132e02d373e')
+      Vue.http.get('')
         .then(response => response.json())
         .then(data => {
           console.log(data)
