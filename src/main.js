@@ -5,14 +5,18 @@ import VueResource from 'vue-resource'
 
 import App from './App'
 import router from './router'
+import { store } from './store/store'
 
 Vue.use(VueResource)
 
 Vue.config.productionTip = false
 
+// Vue.http.headers.common['Access-Control-Allow-Origin'] = '*'
+// Vue.http.options.emulateJSON = true
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })
